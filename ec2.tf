@@ -10,5 +10,4 @@ resource "aws_instance" "this_ubuntu" {
       purpose = "fazila"
     } 
     
-
 } 
