@@ -1,8 +1,8 @@
-resource "aws_iam_user" "iamuserJahagirdar" {
-name = "jahagirdar"
+resource "aws_iam_user" "iamuserfazi" {
+name = "fazi"
 path = "/"
 
 tags = {
-  name = "jahagirdar"
+  name = "fazi"
   }
 }
