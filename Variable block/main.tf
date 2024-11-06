@@ -1,12 +1,11 @@
 resource "aws_instance" "this_ubuntu" {
-
-    ami = "ami-0c8cbc55eb5f3c5cc" 
-    disable_api_stop  = false 
-    disable_api_termination = false  
-    instance_type = "t2.micro" 
-
-    vpc_security_group_ids = ["sg-0063c7dcb89f09c9b" , ]
-    count = 2  #loop 
+    ami = var.this_image_id 
+    disable_api_stop  = var.this_disable_api_stop 
+    disable_api_termination = var.this_disable_api_termination  
+    instance_type = var.this_list[0]
+   
+    vpc_security_group_ids = [var.this_vpc_security_group_ids]
+    count = var.this_count  #loop #var.this_list[1]
     tags = {
       purpose = "webserver"
     } 
