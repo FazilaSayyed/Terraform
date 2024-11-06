@@ -35,3 +35,10 @@ variable "this_count" {
      type = number
      default = 2
 }
+
+
+variable "this_list" {
+    type = list 
+    default = ["t2.micro" , "2" , "false"]
+     
+}
