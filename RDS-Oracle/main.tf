@@ -1,7 +1,3 @@
-provider "aws" {
-  region  = var.this_aws_region
-}
-
 # Oracle RDS Instance
 resource "aws_db_instance" "oracle_db" {
   identifier              = var.this_db_identifier
