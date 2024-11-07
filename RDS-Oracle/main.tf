@@ -1,4 +1,3 @@
-# Oracle RDS Instance
 resource "aws_db_instance" "oracle_db" {
   identifier              = var.this_db_identifier
   allocated_storage       = var.this_db_allocated_storage
