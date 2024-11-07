@@ -19,7 +19,7 @@ variable "this_db_allocated_storage" {
 variable "this_db_instance_class" {
   description = "DB instance class"
   type        = string
-  default     = "db.m6i.xlarge"
+  default     = "db.t3.medium"
 }
 
 variable "this_db_name" {
