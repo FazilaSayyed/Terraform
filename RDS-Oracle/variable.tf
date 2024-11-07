@@ -7,7 +7,7 @@ variable "this_aws_region" {
 variable "this_db_identifier" {
   description = "RDS instance identifier"
   type        = string
-  default     = "my-oracle-db"
+  default     = "oracle-db"
 }
 
 variable "this_db_allocated_storage" {
@@ -19,7 +19,7 @@ variable "this_db_allocated_storage" {
 variable "this_db_instance_class" {
   description = "DB instance class"
   type        = string
-  default     = "db.t3.medium"
+  default     = "db.m6i.xlarge"
 }
 
 variable "this_db_name" {
