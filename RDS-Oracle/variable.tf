@@ -13,7 +13,7 @@ variable "this_db_identifier" {
 variable "this_db_allocated_storage" {
   description = "Storage size in GB"
   type        = number
-  default     = 20
+  default     = 100
 }
 
 variable "this_db_instance_class" {
