@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 # Oracle RDS Instance
-resource "aws_db_instance" "my_oracle_db" {
+resource "aws_db_instance" "oracle_db" {
   identifier              = var.this_db_identifier
   allocated_storage       = var.this_db_allocated_storage
   engine                  = "oracle-se2"       # Or "oracle-se1", "oracle-ee" depending on your needs
@@ -23,9 +23,9 @@ resource "aws_db_instance" "my_oracle_db" {
 
 # Output database endpoint
 output "db_endpoint" {
-  value = aws_db_instance.my_oracle_db.endpoint
+  value = aws_db_instance.oracle_db.endpoint
 }
 
 output "db_arn" {
-  value = aws_db_instance.my_oracle_db.arn
+  value = aws_db_instance.oracle_db.arn
 }
