@@ -1,4 +1,4 @@
-resource "aws_db_instance" "oracle_db" {
+resource "aws_db_instance" "my_oracle_db" {
   identifier              = var.this_db_identifier
   allocated_storage       = var.this_db_allocated_storage
   engine                  = "oracle-se2"       # Or "oracle-se1", "oracle-ee" depending on your needs
