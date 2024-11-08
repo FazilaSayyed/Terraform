@@ -10,3 +10,11 @@
   publicly_accessible  = true
   vpc_security_group_ids = "sg-0063c7dcb89f09c9b"
   multi_az             = false
+
+
+
+#run through this command  
+
+terraform apply -var-file="variables.tfvars"
+
+#then only .tfvars file will run
