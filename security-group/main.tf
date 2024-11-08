@@ -23,7 +23,7 @@ resource "aws_security_group" "this_sg" {
 }  
 
 # Create an EC2 instance and attach the security group
-resource "aws_instance" "example_ec2" {
+resource "aws_instance" "this_ubuntu" {
   ami           = "ami-0c8cbc55eb5f3c5cc"  # Replace with your AMI ID
   instance_type = "t2.micro"               # Update instance type as needed
 
