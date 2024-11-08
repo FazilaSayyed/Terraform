@@ -1,6 +1,6 @@
 # Create a new security group
-resource "aws_security_group" "example_sg" {
-  name        = "example-security-group"
+resource "aws_security_group" "this_sg" {
+  name        = "security-group"
   description = "Security group for example application"
   vpc_id      = "vpc-00dfca8f018d8f5d3"  # Replace with your VPC ID
 
@@ -20,4 +20,14 @@ resource "aws_security_group" "example_sg" {
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
   }
+}  
+
+# Create an EC2 instance and attach the security group
+resource "aws_instance" "example_ec2" {
+  ami           = "ami-0c8cbc55eb5f3c5cc"  # Replace with your AMI ID
+  instance_type = "t2.micro"               # Update instance type as needed
+
+  # Attach the security group
+  vpc_security_group_ids = [aws_security_group.this_sg.id]
 }
+
