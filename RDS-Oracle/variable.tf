@@ -13,13 +13,13 @@ variable "this_db_identifier" {
 variable "this_db_allocated_storage" {
   description = "Storage size in GB"
   type        = number
-  default     = 100
+  default     = 20
 }
 
 variable "this_db_instance_class" {
   description = "DB instance class"
   type        = string
-  default     = "db.m6i.xlarge"
+  default     = "db.m5.large"
 }
 
 variable "this_db_name" {
