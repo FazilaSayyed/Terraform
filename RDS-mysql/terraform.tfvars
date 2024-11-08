@@ -15,6 +15,6 @@
 
 #run through this command  
 
-terraform apply -var-file="variables.tfvars"
+#terraform apply -var-file="variables.tfvars"
 
 #then only .tfvars file will run
