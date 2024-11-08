@@ -25,7 +25,7 @@ resource "aws_security_group" "this_sg" {
 # Create an EC2 instance and attach the security group
 resource "aws_instance" "this_ubuntu" {
   ami           = "ami-0c8cbc55eb5f3c5cc"  # Replace with your AMI ID
-  instance_type = "t2.micro"               # Update instance type as needed
+  instance_type = "t4g.nano"               # Update instance type as needed
 
   # Attach the security group
   vpc_security_group_ids = [aws_security_group.this_sg.id]
