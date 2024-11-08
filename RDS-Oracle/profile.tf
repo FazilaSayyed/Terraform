@@ -1,5 +1,4 @@
 provider "aws" {
-     
-region = "us-west-1"
-     profile = "configs"
+  alias  = "secondary"
+  region = "us-east-1"
 }
