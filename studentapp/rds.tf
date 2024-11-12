@@ -5,7 +5,7 @@ resource "aws_db_instance" "student_db" {
   instance_class          = "db.t3.micro"         # Choose an appropriate instance type
   allocated_storage       = 20                    # Storage size in GB
   storage_type            = "gp2"                 # General-purpose SSD storage
-  db_name                    = var.db_name          # Name of the database
+  db_name                 = var.db_name          # Name of the database
   username                = var.db_username               # Master username
   password                = var.db_password       # Master password (keep it secure)
   publicly_accessible     = false                 # Set to true if you want public access
