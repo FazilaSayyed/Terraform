@@ -3,5 +3,5 @@
   }
 
   output "instance_id" {
-    value = aws_instance.this_ubuntu.instance_id
+    value = aws_instance.this_ubuntu.id
   }
