@@ -5,7 +5,7 @@ resource "aws_instance" "this_ubuntu" {
     instance_type = var.this_list[0]
    
     vpc_security_group_ids = [var.this_vpc_security_group_ids]
-    count = var.this_count  #loop #var.this_list[1]
+    # count = var.this_count  #loop #var.this_list[1]
     tags = {
       purpose = "webserver"
     } 
