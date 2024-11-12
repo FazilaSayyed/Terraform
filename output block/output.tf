@@ -1,7 +1,7 @@
-  ouput "instancepublic_ip" {
+  output "instancepublic_ip" {
     value = aws_instance.this_ubuntu.public_ip
   }
 
-  ouput "instance_id" {
+  output "instance_id" {
     value = aws_instance.this_ubuntu.instance_id
   }
