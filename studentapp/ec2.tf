@@ -10,7 +10,7 @@ resource "aws_instance" "app_server" {
               sudo apt install mariadb-client -y
 
               # Clone the repository
-              git clone https://github.com/FazilaSayyed/student.war-jenkins.git /home/ubuntu/Studentapp
+              git clone https://github.com/FazilaSayyed/student.war-jenkins.git /home/ubuntu/Studentapp/studentapp-ui-master/
 
               # Navigate to the project directory and build it
               cd /home/ubuntu/Studentapp
