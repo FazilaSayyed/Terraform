@@ -15,5 +15,5 @@ variable "db_name" {
 
 variable "instance_type" {
   type    = string
-  default = "db.t3.small"  # Adjust based on your requirements
+  default = "db.t2.micro"  # Adjust based on your requirements
 }
