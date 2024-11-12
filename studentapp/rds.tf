@@ -2,7 +2,7 @@ resource "aws_db_instance" "student_db" {
   identifier              = "student"  # Customize this name
   engine                  = "mariadb"
   engine_version          = "10.5"                # Specify the desired MariaDB version
-  instance_class          = "t3.micro"         # Choose an appropriate instance type
+  instance_class          = "db.t3.micro"         # Choose an appropriate instance type
   allocated_storage       = 20                    # Storage size in GB
   storage_type            = "gp2"                 # General-purpose SSD storage
   db_name                    = var.db_name          # Name of the database
