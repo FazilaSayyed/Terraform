@@ -1,8 +1,3 @@
-# provider.tf
-provider "aws" {
-  region = "us-west-1"  # Change this to your preferred AWS region
-}
-
 # vpc.tf
 resource "aws_vpc" "main_vpc" {
   cidr_block           = "10.0.0.0/16"
