@@ -13,7 +13,7 @@ resource "aws_instance" "app_server" {
               git clone https://github.com/FazilaSayyed/student.war-jenkins.git /home/ubuntu/Studentapp/studentapp-ui-master/
 
               # Navigate to the project directory and build it
-              cd /home/ubuntu/Studentapp
+              cd /home/ubuntu/Studentapp/studentapp-ui-master/
               mvn clean package
 
               # Download and install Tomcat
