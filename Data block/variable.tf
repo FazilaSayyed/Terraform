@@ -1,6 +1,6 @@
 variable "this_image_id" {
      type = string
-     default = "ami-0c8cbc55eb5f3c5cc"
+     default = "ami-0da424eb883458071"
 }
 
 # this means unique name
@@ -22,7 +22,7 @@ variable "this_disable_api_termination" {
 
 variable "this_instance_type" {
      type = string
-     default = "t4g.nano"
+     default = "t2.micro"
 }
 
 variable "this_vpc_security_group_ids" {
