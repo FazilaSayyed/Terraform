@@ -1,4 +1,4 @@
-data "aws_ami" "this_aws_ami" {
+data "aws_ami" "this_ami" {
     name_regex       = "ami_use"
       filter {
     name   = "name"
