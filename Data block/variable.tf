@@ -25,21 +25,7 @@ variable "this_instance_type" {
      default = "t4g.nano"
 }
 
-#vpc.....
-
 variable "this_vpc_security_group_ids" {
      type = string
      default = "sg-0063c7dcb89f09c9b"
-}
-
-variable "this_count" {
-     type = number
-     default = 2
-}
-
-
-variable "this_list" {
-    type = list 
-    default = ["t4g.nano" , "2" , "false"]
-     
 }
