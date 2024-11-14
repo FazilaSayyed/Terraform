@@ -1,6 +1,6 @@
 resource "aws_instance" "this_ubuntu" {
     
-   ami =  data.aws_ami.this_aws.id     
+   ami =  data.aws_ami.this_aws_ami.id     
 
    #data.provider_resourcename.uniquename.attribute
 
