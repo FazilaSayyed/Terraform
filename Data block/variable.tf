@@ -1,6 +1,6 @@
 variable "this_image_id" {
      type = string
-     default = "ami-0da424eb883458071"
+     default = "ami-036b484b859c4e27b"
 }
 
 # this means unique name
