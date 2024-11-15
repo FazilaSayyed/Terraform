@@ -1,4 +1,4 @@
-data "aws_ami" "example" {
+data "aws_ami" "static" {
     name_regex       = "ami-web"
     filter {
     name   = "name"
