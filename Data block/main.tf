@@ -1,14 +1,19 @@
-resource "aws_instance" "this_ubuntu" {
-    ami =  data.aws_ami.this_aws_ami.id   #var.this_image_id 
-    disable_api_stop  = var.this_any.api_stop_ec2  #var.this_disable_api_stop 
-    disable_api_termination =  var.this_any.api_termination_ec2  #var.this_disable_api_termination  
-    instance_type = var.this_list[0]  #var.this_any.instance_type_list[0]
-    
-    tags = {
-       purpose = var.this_map.purposeec2    #var.this_any.tags_map.purposeec2
-       #purpose = "webserver"
-    } 
-    
-}  
+# Specify the provider (AWS)
+provider "aws" {
+  region = var.this_aws_region
+}
 
-#data.aws_security_group.lb_sg.attribute
+# Create an EC2 instance
+resource "aws_instance" "static" {
+  ami           = data.aws_ami.static.id 
+  instance_type = var.this_instance_type[0]              
+  key_name      = var.this_key_pair          
+  vpc_security_group_ids = [data.aws_security_group.default.id]
+
+  # Optional: Tagging the instance
+  tags = var.this_tag
+  
+  # Optional: Associate a public IP with the instance (for public access)
+  associate_public_ip_address = var.this_associate_public_ip
+
+}  
