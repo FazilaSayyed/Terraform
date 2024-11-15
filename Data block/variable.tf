@@ -1,60 +1,32 @@
-variable "this_image_id" {
-  type        = string
-  default = "ami-036b484b859c4e27b"
-}
-
-variable "this_disable_api_stop" {
-  type        = bool
-  default = false
-}
-variable "this_disable_api_termination" {
-    type = bool 
-    default = false
-    description = "this variable is used to pass bool data to api_termination" 
-}
-variable "this_count" {
-    type = number 
-    default = 2
-     
-}
-variable "this_vpc_security_group_ids" {
+variable this_aws_region {
     type = string 
-    default = "sg-0063c7dcb89f09c9b"
-     
+    default = "us-west-1"
+    description = "This variable is for aws region"
 }
 
-variable "this_list" {
-    type = list 
-    default = ["t2.micro" , "2" , "false"]
-     
+variable "this_instance_type" {
+    type = list
+    default = ["t2.micro" , "t3.small" , "t3.large"]
+    description = "This variable is for aws instance type"
 }
 
-variable "this_map" {
-    type = map  
+variable "this_key_pair" {
+    type = string
+    default = "navidali"
+    description = "This variable is for aws key pair"
+}
+
+variable "this_associate_public_ip" {
+    type = bool
+    default = true 
+    description = "This variable is for aws assoociate public ip address"
+}
+
+variable "this_tag" {
+    type = map 
     default = {
-     purposeec2 = "webserver"   
-     termination = true 
-     count = 1
-
+        Name = "StaticWebHostingInstance"
+        Enivronment ="Dev"
     }
-     
-}
-
-
-variable "this_any" {
-    type = any 
-    default = {
-        count = 1
-        api_termination_ec2 = false
-        api_stop_ec2 = false 
-        ami_ec2 = "ami-03753afda9b8ba740" 
-        instance_type_list = ["t2.micro" , "t3.small" , "t3.large"]
-        tags_map = {
-           purposeec2 = "webserver" 
-
-        }
-
-
-
-    }
+    description = "This variable is for aws instance tagging"
 }
