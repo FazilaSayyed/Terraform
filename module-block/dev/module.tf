@@ -12,3 +12,4 @@ module "ec2" {
     this_security_group = "sg-0063c7dcb89f09c9b"
     this_instance_name = "ExampleInstance"
     this_key_name = "navidali"
+}
