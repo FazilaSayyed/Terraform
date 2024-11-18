@@ -7,3 +7,6 @@ module "ec2" {
     this_instance_name = "ExampleInstance"
     this_key_name ="navidali"
 }
+
+
+new
