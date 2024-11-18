@@ -8,5 +8,3 @@ module "ec2" {
     this_key_name ="navidali"
 }
 
-
-new
