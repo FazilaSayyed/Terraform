@@ -1,11 +1,11 @@
 module "vpc" {
-    source = "/home/cloudshell-user/Terraform/Terraform block/Module block/Resources/VPC"
+    source = "/home/cloudshell-user/Terraform/module-block/resources/vpc"
     this_vpc_cidr_block = "10.0.0.0/16"
     this_vpc_name = "example"
 }
 
 module "ec2" {
-    source = "/home/cloudshell-user/Terraform/Terraform block/Module block/Resources/EC2"
+    source = "/home/cloudshell-user/Terraform/module-block/resources/ec2"
     this_ami = "ami-0819a8650d771b8be"
     this_instance_type = "t2.micro"
     this_associate_public_ip = true
