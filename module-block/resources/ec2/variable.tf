@@ -27,5 +27,3 @@ variable "this_instance_name" {
   description = "The variable is for Name of the instance"
   type        = string
 }
-
-
