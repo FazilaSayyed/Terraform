@@ -1,5 +1,5 @@
 module "vpc" {
-  source                       = "/home/cloudshell-user/Terraform/Module/resources/vpc"
+  source                       = "/home/cloudshell-user/Terraform/vpc-attach-ec2-moduleblock/resorce/vpc"
   this_vpc_cidr_block          = "12.11.0.0/16"
   this_vpc_tags                = "this_vpc"
   this_subnet_pub_cidr_block   = "12.11.0.0/17"
@@ -9,7 +9,7 @@ module "vpc" {
 }
 
 module "ec2" {
-  source                       = "/home/cloudshell-user/Terraform/Module/resources/ec2"
+  source                       = "/home/cloudshell-user/Terraform/vpc-attach-ec2-moduleblock/resorce/ec2"
   this_image_id                = "ami-0da424eb883458071"
   this_list                    = "t2.micro"
   this_disable_api_stop        = false
