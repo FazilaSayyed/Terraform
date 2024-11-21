@@ -18,4 +18,7 @@ module "ec2" {
 #connecting vpc to ec2   module.vpc.attribute
 #  this_aws_vpc_id = module.aws_vpc.aws_vpc_id #here aws_vpc name is vpc
   #this_aws_instance_subnet = module.aws_vpc.aws_subnet_main
+
+
+  #sg is already mention in variable.tf
 }
