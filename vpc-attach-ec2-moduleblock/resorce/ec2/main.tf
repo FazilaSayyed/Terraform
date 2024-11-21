@@ -1,21 +1,7 @@
-resource "aws_vpc" "main" {
-  cidr_block = var.this_vpc_cidr_block
-
-  tags = {
-    Name = var.this_vpc_tags
-  }
+resource "aws_instance" "this_ubuntu" {
+    ami = var.this_image_id    #var.this_image_id 
+    disable_api_stop  = var.this_disable_api_stop  #var.this_disable_api_stop 
+    disable_api_termination =  var.this_disable_api_termination  #var.this_disable_api_termination  
+    instance_type = var.this_list  #var.this_any.instance_type_list[0]
+    subnet_id =  var.this_aws_instance_subnet 
 }
-
-resource "aws_subnet" "main" {
-  vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.this_subnet_pub_cidr_block
-  map_public_ip_on_launch = var.this_subnet_pub_map_ip
-  availability_zone       = var.this_vpc_az
-
-  tags = {
-    Name = var.this_subnet_pub_tags
-  }
-}
-
-
-

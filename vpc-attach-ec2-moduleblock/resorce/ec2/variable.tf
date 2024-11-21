@@ -1,23 +1,35 @@
-variable "this_vpc_cidr_block" {
-  description = "CIDR block for the VPC"
+variable "this_image_id" {
+  type        = string
 }
 
-variable "this_vpc_tags" {
-  description = "Tags for the VPC"
+
+variable "this_count" {
+    type = number 
+    default = 2
+     
+}
+variable "this_vpc_security_group_ids" {
+    type = string 
+    default = "sg-0063c7dcb89f09c9b"
+     
 }
 
-variable "this_subnet_pub_cidr_block" {
-  description = "CIDR block for the public subnet"
+variable "this_list" {
+    type = string
+     
 }
 
-variable "this_subnet_pub_map_ip" {
-  description = "Whether to map public IPs on launch"
+variable "this_disable_api_stop" {
+     type = bool
+
 }
 
-variable "this_subnet_pub_tags" {
-  description = "Tags for the public subnet"
+variable "this_disable_api_termination" {
+  type = bool
+
 }
 
-variable "this_vpc_az" {
-  description = "Availability Zone for the subnet"
+variable "this_aws_instance_subnet" {
+   type = string
+
 }
