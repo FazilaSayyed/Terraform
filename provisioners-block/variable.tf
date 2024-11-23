@@ -1,3 +1,11 @@
+variable "this_image_id" {
+    type = "string"
+'   default = "ami-0da424eb883458071"
+}
+
+
+
+
 variable "this_disable_api_stop" {
      type = bool
 
