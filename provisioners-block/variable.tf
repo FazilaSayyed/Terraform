@@ -51,8 +51,8 @@ variable "this_subnet_pub_cidr_block" {
 
 
 variable "this_subnet_pub_map_ip" {
-    deafult = ""
-    type = string
+    deafult = true
+    type = bool
 }
 
 
