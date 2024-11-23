@@ -8,16 +8,19 @@ variable "this_image_id" {
 
 
 variable "this_disable_api_stop" {
-     type = bool
+   default = false
+   type = bool
 
 }
 
 variable "this_disable_api_termination" {
+  default = false
   type = bool
 
 }
 
 variable "this_instance_type" {
+    default = t3.micro
     type = string
      
 }
