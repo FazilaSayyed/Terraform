@@ -13,7 +13,7 @@ variable "this_list" {
      
 }
 
-variable "this_map.purposeec2" {
+variable "this_map" {
     type = string
 }
 
