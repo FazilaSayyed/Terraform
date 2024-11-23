@@ -31,6 +31,7 @@ variable "this_map" {
 
 
 variable "this_vpc_cidr_block" {
+  default =  "12.11.0.0/16"
   type = string
 }
 
@@ -43,7 +44,7 @@ variable "this_vpc_tags" {
 
 
 variable "this_subnet_pub_cidr_block" {
-    default = "12.11.0.0/16"
+    default = "12.11.0.0/17"
     type = string
 }
 
