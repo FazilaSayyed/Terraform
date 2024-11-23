@@ -2,7 +2,7 @@ resource "aws_instance" "this_ubuntu" {
     ami = var.this_image_id 
     disable_api_stop  = var.this_disable_api_stop  #var.this_disable_api_stop 
     disable_api_termination = var.this_disable_api_termination  
-    instance_type = var.this_list[0]  #var.this_any.instance_type_list[0]
+    instance_type = var.this_instance_type  #var.this_any.instance_type_list[0]
     depends_on = [aws_subnet.this_subnet_pub]
     tags = {
        purpose = var.this_map    #var.this_any.tags_map.purposeec2
