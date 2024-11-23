@@ -38,6 +38,7 @@ variable "this_vpc_cidr_block" {
 
 
 variable "this_vpc_tags" {
+    default = "this_vpc"
     type = string
 }
 
