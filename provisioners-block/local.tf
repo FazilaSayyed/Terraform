@@ -5,15 +5,14 @@ region = "us-west-1"
 }
 
 
- resource "aws_instance" "this_aws_instance" {
+resource "aws_instance" "this_aws_instance" {
     ami = "ami-0da424eb883458071"
     vpc_security_group_ids = ["sg-0063c7dcb89f09c9b"]
     key_name = "navidali"
     instance_type = "t2.micro"
-     
-  
-  
-  }
+}
+   
+   
    provisioner "local-exec" {
     command = "echo ${self.private_ip} >> /tmp/private_ips.txt "
   }
@@ -23,4 +22,3 @@ region = "us-west-1"
   }
 
 
-}
