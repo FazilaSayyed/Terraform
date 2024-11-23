@@ -19,8 +19,9 @@ variable "this_map" {
 
 
 variable "this_vpc_cidr_block" {
-    type = "string"
+  type = string
 }
+
 
 
 variable "this_vpc_tags" {
