@@ -12,11 +12,11 @@ resource "aws_instance" "this_aws_instance" {
      
      provisioner "file" {
     source      = "readme.md"
-    destination = "/home/ec2-user/readme.md"
+    destination = "/home/ubuntu/readme.md"   #ubuntu
      connection {
     type     = "ssh"
-    user     = "ec2-user"
-    private_key = file("${path.module}/id_rsa.pem")
+    user     = "ubuntu"
+    private_key = file("${path.module}/navidali.pem")
     host     = "${self.public_ip}"
   }
   }
