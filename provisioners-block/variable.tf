@@ -26,7 +26,8 @@ variable "this_instance_type" {
 }
 
 variable "this_map" {
-    type = string
+   default = "purposeec2" 
+   type = string
 }
 
 
