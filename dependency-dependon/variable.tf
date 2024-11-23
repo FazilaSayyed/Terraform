@@ -1,5 +1,5 @@
 variable "this_image_id" {
-   default = ""
+   default = "ami-0da424eb883458071"
    type = string
 }
 
