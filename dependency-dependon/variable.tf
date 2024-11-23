@@ -17,11 +17,6 @@ variable "this_instance_type" {
    type = string
 }
 
-variable "this_disable_api_termination" {
-   default = false
-   type = bool
-}
-
 
 variable "this_tags" {
    default = "purpose"
