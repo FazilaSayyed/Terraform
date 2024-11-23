@@ -10,15 +10,14 @@ resource "aws_instance" "this_aws_instance" {
     vpc_security_group_ids = ["sg-0063c7dcb89f09c9b"]
     key_name = "navidali"
     instance_type = "t2.micro"
-}
    
    
-   provisioner "local-exec" {
+  provisioner "local-exec" {
     command = "echo ${self.private_ip} >> /tmp/private_ips.txt "
   }
-    provisioner "local-exec" {
+  provisioner "local-exec" {
     working_dir = "/tmp/"
     command = "echo ${self.private_ip} >> workingdir_private_ips.txt "
   }
 
-
+}
