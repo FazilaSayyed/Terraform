@@ -51,10 +51,12 @@ variable "this_subnet_pub_cidr_block" {
 
 
 variable "this_subnet_pub_map_ip" {
+    deafult = ""
     type = string
 }
 
 
 variable "this_subnet_pub_tags" {
+    dafault = "pub_subnet"
     type = string
 }
