@@ -10,10 +10,10 @@ resource "aws_instance" "this_aws_instance" {
     key_name = "navidali"
     instance_type = "t2.micro"
      
-    provisioner "file" {
+     provisioner "file" {
     source      = "readme.md"
     destination = "/home/ec2-user/readme.md"
-    connection {
+     connection {
     type     = "ssh"
     user     = "ec2-user"
     private_key = file("${path.module}/id_rsa")
