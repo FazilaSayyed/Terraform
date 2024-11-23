@@ -1,8 +1,9 @@
-variable "this_image_id" {
-    type = string
-'   default = "ami-0da424eb883458071"
-}
 
+
+variable "this_image_id" {
+  default = "ami-0da424eb883458071"
+  type    = string
+}
 
 
 
