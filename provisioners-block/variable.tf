@@ -17,7 +17,7 @@ variable "this_disable_api_termination" {
 
 }
 
-variable "this_list" {
+variable "this_instance_type" {
     type = string
      
 }
