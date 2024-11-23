@@ -5,7 +5,7 @@ resource "aws_instance" "this_ubuntu" {
     instance_type = var.this_list[0]  #var.this_any.instance_type_list[0]
     depends_on = [aws_subnet.this_subnet_pub]
     tags = {
-       purpose = var.this_map.purposeec2    #var.this_any.tags_map.purposeec2
+       purpose = var.this_map    #var.this_any.tags_map.purposeec2
     } 
     
 }  
