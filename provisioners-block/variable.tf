@@ -20,7 +20,7 @@ variable "this_disable_api_termination" {
 }
 
 variable "this_instance_type" {
-    default = t3.micro
+    default = "t3.micro"
     type = string
      
 }
